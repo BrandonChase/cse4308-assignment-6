@@ -174,6 +174,7 @@ public class CheckTrueFalse {
 			}
 			
 			writer.write(decision);
+			writer.newLine();
 			writer.close();
 		} catch(Exception e) {
 			System.err.println(e.getMessage());

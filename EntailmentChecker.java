@@ -7,12 +7,12 @@ import java.util.Vector;
 public class EntailmentChecker {
 	public boolean TTEntails(LogicalExpression KB, LogicalExpression alpha) throws Exception {
 		ArrayList<String> symbols = concatenate(extractSymbols(KB), extractSymbols(alpha));
-		HashMap<String, Boolean> model = new HashMap<>();
+		HashMap<String, Boolean> model = new HashMap<String, Boolean>();
 		return TTCheckAll(KB, alpha, symbols, model);
 	}
 	
 	private ArrayList<String> extractSymbols(LogicalExpression expression) {
-		ArrayList<String> result = new ArrayList<>();
+		ArrayList<String> result = new ArrayList<String>();
 		if(expression.getUniqueSymbol() != null) {
 			result.add(expression.getUniqueSymbol());
 		} else {
